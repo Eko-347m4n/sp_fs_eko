@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+
+# prisma database and schema files
+/prisma/sp_fs_eko.db
+/prisma/migrations/20250629052222_init/migration.sql
+/sp_fs_eko.db
