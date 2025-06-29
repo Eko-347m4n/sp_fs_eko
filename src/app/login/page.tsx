@@ -18,10 +18,12 @@ export default function LoginPage() {
     e.preventDefault();
     setError(null);
     setLoading(true);
-    const result = await signIn("credentials", { email, password, redirect: false });
+    const result = await signIn("credentials", { email, password, callbackUrl: "/dashboard" });
     setLoading(false);
     if (result?.error) {
       setError(result.error);
+    } else {
+      router.push("/dashboard");
     }
   };
 
